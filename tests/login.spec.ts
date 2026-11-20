@@ -25,10 +25,10 @@ import { env } from "../utils/env";
 // });
 test('signs in with the .env credentials', async ({ page }) => {
   await page.goto(`/testing/framework-setup/login?a=${env.assignment}`);
-  await page.getByTestId('env-email').fill(env.demoEmail);
-  await page.getByTestId('env-password').fill(env.demoPass);
-  await page.getByTestId('env-submit').click();
-  await expect(page.getByTestId('env-success')).toBeVisible();
+  await page.getByTestId('login-email').fill(env.demoEmail);
+  await page.getByTestId('login-password').fill(env.demoPass);
+  await page.getByTestId('login-submit').click();
+  await expect(page.getByTestId('login-success')).toBeVisible();
 });
 
 
